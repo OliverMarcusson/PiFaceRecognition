@@ -1,13 +1,13 @@
 import cv2
 
 # Load the cascade
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+face_cascade = cv2.CascadeClassifier('venv\Lib\site-packages\cv2\data\haarcascade_frontalface_default.xml')
 
 # Load the recognizer
 recognizer = cv2.face.LBPHFaceRecognizer_create()
 
 # Load the trained model
-recognizer.read('path/to/trained_model.yml')
+recognizer.read('model.yml')
 
 # Start the camera
 cap = cv2.VideoCapture(0)

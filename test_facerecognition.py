@@ -3,8 +3,8 @@ import os
 import numpy as np
 
 # Define the paths to the training images and labels
-data_dir = 'C:\Users\Niklas.zimmer\Documents\programering\Face regocnition\PiFaceRecognition\dataset'
-labels_file = 'path/to/labels.txt'
+data_dir = 'dataset'
+labels_file = 'labels.txt'
 
 # Load the training images and labels
 X_train = []
@@ -25,7 +25,7 @@ recognizer = cv2.face.LBPHFaceRecognizer_create()
 recognizer.train(X_train, np.array(y_train))
 
 # Save the trained model to a file
-model_file = 'path/to/trained/model.yml'
+model_file = 'model.yml'
 recognizer.write(model_file)
 
 # Save the labels to a file
